@@ -1,0 +1,27 @@
+site_name: RE Wiki
+nav:  
+  - Assembly:
+    - x86: assembly/x86.md
+    - ARM: assembly/arm.md
+  - Reverse Engineering:
+    - Ghidra: ghidra/ghidra.md
+    - Reversing Techniques: reversing/reng.md
+    - Anti Reversing Techniques: reversing/anti-reversing-techniques.md
+    - Debugging: debugging/debugging.md
+    - Obfuscation: reversing/obfuscation.md
+    - Encryption: reversing/encryption.md
+    - File formats: file_formats/file_format.md
+
+    - Tools: tools/tools.md
+  - OS Internals:
+    - Windows: windows/windows.md
+    - Linux: linux/linux.md
+
+
+not_in_nav: |
+  index.md
+
+theme: readthedocs
+
+markdown_extensions:
+  - admonition

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>ARM - RE Wiki</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "ARM";
+        var mkdocs_page_input_path = "assembly\\arm.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> RE Wiki
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">Assembly</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../x86/">x86</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">ARM</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#arm-registers">Arm registers</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#most-common-instructions">Most common instructions</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Reverse Engineering</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../ghidra/ghidra/">Ghidra</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reversing/reng/">Reversing Techniques</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reversing/anti-reversing-techniques/">Anti Reversing Techniques</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../debugging/debugging/">Debugging</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reversing/obfuscation/">Obfuscation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../reversing/encryption/">Encryption</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../file_formats/file_format/">File formats</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../tools/tools/">Tools</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">OS Internals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../windows/windows/">Windows</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../linux/linux/">Linux</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">RE Wiki</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Assembly</li>
+      <li class="breadcrumb-item active">ARM</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="arm-architecture">Arm architecture</h1>
+<h2 id="arm-registers">Arm registers</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Alias</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">R0</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">General purpose</td>
+</tr>
+<tr>
+<td style="text-align: center;">R1</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">General purpose</td>
+</tr>
+<tr>
+<td style="text-align: center;">R2</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">General purpose</td>
+</tr>
+<tr>
+<td style="text-align: center;">R3</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">General purpose</td>
+</tr>
+<tr>
+<td style="text-align: center;">R4</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">General purpose</td>
+</tr>
+<tr>
+<td style="text-align: center;">R5</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">General purpose</td>
+</tr>
+<tr>
+<td style="text-align: center;">R6</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">General purpose</td>
+</tr>
+<tr>
+<td style="text-align: center;">R7</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">Holds Syscall Number</td>
+</tr>
+<tr>
+<td style="text-align: center;">R8</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">General purpose</td>
+</tr>
+<tr>
+<td style="text-align: center;">R9</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">General purpose</td>
+</tr>
+<tr>
+<td style="text-align: center;">R10</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">General purpose</td>
+</tr>
+<tr>
+<td style="text-align: center;">R11</td>
+<td style="text-align: center;">FP</td>
+<td style="text-align: left;">Frame Pointer</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Special Purpose Registers</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Name</th>
+<th style="text-align: center;">Alias</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">R12</td>
+<td style="text-align: center;">IP</td>
+<td style="text-align: left;">Intra Procedural Call</td>
+</tr>
+<tr>
+<td style="text-align: center;">R13</td>
+<td style="text-align: center;">SP</td>
+<td style="text-align: left;">Stack Pointer</td>
+</tr>
+<tr>
+<td style="text-align: center;">R14</td>
+<td style="text-align: center;">LR</td>
+<td style="text-align: left;">Link Register</td>
+</tr>
+<tr>
+<td style="text-align: center;">R15</td>
+<td style="text-align: center;">PC</td>
+<td style="text-align: left;">Program Counter</td>
+</tr>
+<tr>
+<td style="text-align: center;">CPSR</td>
+<td style="text-align: center;">–</td>
+<td style="text-align: left;">Current Program Status Register</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>CPSR</code>  contains the following ALU status flags:</p>
+<ul>
+<li><code>N</code>: Set when the result of the operation was Negative.</li>
+<li><code>Z</code>: Set when the result of the operation was Zero.</li>
+<li><code>C</code>: Set when the operation resulted in a Carry.</li>
+<li><code>V</code>: Set when the operation caused overflow.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>PC points two instructions ahead of the current PC value, because older ARM processors always fetched two instructions ahead of the currently executed instructions</p>
+</div>
+<h2 id="most-common-instructions">Most common instructions</h2>
+<ul>
+<li><code>MOV</code> - Move data </li>
+<li><code>EOR</code> - Bitwise XOR</li>
+<li><code>MVN</code> - Move and negate   </li>
+<li><code>LDR</code> - Load</li>
+<li><code>ADD</code> - Addition  </li>
+<li><code>STR</code> - Store</li>
+<li><code>SUB</code> - Subtraction   </li>
+<li><code>LDM</code> - Load Multiple</li>
+<li><code>MUL</code> - Multiplication    </li>
+<li><code>STM</code> - Store Multiple</li>
+<li><code>LSL</code> - Logical Shift Left    </li>
+<li><code>PUSH</code> - Push on Stack</li>
+<li><code>LSR</code> - Logical Shift Right   </li>
+<li><code>POP</code> - Pop off Stack</li>
+<li><code>ASR</code> - Arithmetic Shift Right    </li>
+<li><code>B</code>   - Branch</li>
+<li><code>ROR</code> - Rotate Right  </li>
+<li><code>BL</code>  - Branch with Link</li>
+<li><code>CMP</code> - Compare BX    </li>
+<li><code>Branch</code> - and eXchange</li>
+<li><code>AND</code> - Bitwise AND   </li>
+<li><code>BLX</code> - Branch with Link and eXchange</li>
+<li><code>ORR</code>- Bitwise OR </li>
+<li><code>SWI/SVC</code> - System Call</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../x86/" class="btn btn-neutral float-left" title="x86"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../ghidra/ghidra/" class="btn btn-neutral float-right" title="Ghidra">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../x86/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../ghidra/ghidra/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
